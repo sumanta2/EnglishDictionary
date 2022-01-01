@@ -1,0 +1,96 @@
+
+.grandparent{
+    height:96vh;
+    width:96vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent{
+    height:533px;
+    width:555px;
+    background-color:rgba(143, 152, 248, 0.163);
+    border:1px solid blue;
+    border-radius:5px;
+    padding:4px;
+    overflow-y:auto;
+
+}
+
+.store{
+    /* border:1px solid red; */
+    /* margin:5px 0px; */
+    padding-top:5px;
+}
+
+#myDiv{
+    background-color:rgba(110, 122, 248, 0.272);
+    padding:6px;
+    border-radius:5px;
+    border:1px solid blue;
+
+}
+
+.inputData{
+    border:none;
+    outline:none;
+    border-bottom:2px solid blue;
+    background-color:rgba(86, 100, 255, 0.319);
+    border-radius:5px;
+    font-size:19px;
+    color:blue;
+}
+
+#myButton{
+    background-color:rgba(86, 100, 255, 0.319);
+    color:blue;
+    font-size:16px;
+    border-radius:5px;
+    border:1px solid blue;
+    box-shadow:4px 3px 4px #0000af;
+    /* margin-right:8px; */
+    margin-left:8px;
+}
+#clearBtn{
+    background-color:rgba(86, 100, 255, 0.319);
+    color:blue;
+    font-size:16px;
+    border-radius:5px;
+    border:1px solid blue;
+    box-shadow:4px 3px 4px #0000af;
+    /* margin-right:8px; */
+    margin-left:8px;
+}
+#myButton:active{
+    box-shadow:none;
+}
+#clearBtn:active{
+    box-shadow:none;
+}
+
+#search{
+    margin-bottom:7px;
+    padding:6px;
+    background-color:rgba(110, 122, 248, 0.272);
+    border:1px solid blue;
+    border-radius:5px;
+}
+
+.contain{
+    border:2px solid blue;
+    border-radius:5px;
+    margin:4px 2px;
+    background-color:rgba(80, 93, 238, 0.347);
+}
+.p{
+    margin:6px;
+    padding-left:16px;
+    color:blue;
+    border-radius:8px;
+    background-color:rgba(80, 93, 238, 0.394);
+}
+.span{
+    margin:6px;
+    color:blue;
+    padding-left:16px;
+}
