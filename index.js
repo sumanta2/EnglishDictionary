@@ -1,4 +1,4 @@
-const createElemeint=(parent,heading,myData)=>{
+const createElement=(parent,heading,myData)=>{
     
     parent=="myDiv"?parent='myDiv':parent=`contain${parent}`;
     
@@ -58,41 +58,41 @@ document.getElementById('myButton').addEventListener("click",()=>{
     if(inputValue==='')
     {
         clearScreen()
-        createElemeint("myDiv","!ERROR",'Blank Value are not allowed')
+        createElement("myDiv","!ERROR",'Blank Value are not allowed')
         setTimeout(clearScreen,6000)
     }
     else
     {
         clearScreen()
-        createElemeint("myDiv","SEARCHING",'Please Wait a moment...');
+        createElement("myDiv","SEARCHING",'Please Wait a moment...');
         
         fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
-        .then(responce=>{
-            return responce.json();
+        .then(response=>{
+            return response.json();
         }).then(myname=>{
             console.log(myname)
             clearScreen()
             if(myname.title=="No Definitions Found")
             {
                 clearScreen()
-                createElemeint("myDiv","!ERROR","Please Check Your Spelling")
+                createElement("myDiv","!ERROR","Please Check Your Spelling")
                 setTimeout(clearScreen,6000)
             }
             else
             {
                 makeParent(0);
-                createElemeint(0,'WORD',myname[0].word);
-                createElemeint(0,'PHONETIC SPALING',myname[0].phonetic);
+                createElement(0,'WORD',myname[0].word);
+                createElement(0,'PHONETIC SPALING',myname[0].phonetic);
 
                 makeParent(1);
-                createElemeint(1,'PART-OF-SPEECH',myname[0].meanings[0].partOfSpeech);
-                createElemeint(1,'DEFINITION',myname[0].meanings[0].definitions[0].definition);
+                createElement(1,'PART-OF-SPEECH',myname[0].meanings[0].partOfSpeech);
+                createElement(1,'DEFINITION',myname[0].meanings[0].definitions[0].definition);
 
-                createElemeint(1,'EXAMPLE',myname[0].meanings[0].definitions[0].example);
+                createElement(1,'EXAMPLE',myname[0].meanings[0].definitions[0].example);
             
-                createElemeint(1,'SYNONYMS',checkMargeValue(myname[0].meanings[0].definitions[0].synonyms));
+                createElement(1,'SYNONYMS',checkMargeValue(myname[0].meanings[0].definitions[0].synonyms));
 
-                createElemeint(1,'ANTONYMS',checkMargeValue(myname[0].meanings[0].definitions[0].antonyms));
+                createElement(1,'ANTONYMS',checkMargeValue(myname[0].meanings[0].definitions[0].antonyms));
 
                 
             }
@@ -101,7 +101,7 @@ document.getElementById('myButton').addEventListener("click",()=>{
         .catch(err=>{
                 console.log(err);
                 clearScreen()
-                createElemeint("!ERROR",err)
+                createElement("!ERROR",err)
                 setTimeout(clearScreen,6000)
         })
     
